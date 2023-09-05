@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - echo "Downloading data from GitHub"
-      - git clone https://github.com/tmKamal/under-construction-template.git
+      - git clone https://github.com/liveu-cloudops/git-s3.git
   build:
     commands:
       - echo "Uploading data to S3"
