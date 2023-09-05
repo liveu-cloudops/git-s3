@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+  pre_build:
+    commands:
+      - echo "Downloading data from GitHub"
+      - git clone https://github.com/tmKamal/under-construction-template.git
+  build:
+    commands:
+      - echo "Uploading data to S3"
+      - aws s3 sync . s3://tatva-test-2/
